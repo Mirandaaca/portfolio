@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #d3d3d3;
+  color: #333;
+}
+
+.layout {
+  width: 100%;
+
+  display: grid;
+  grid:
+    "header" auto
+    "main" 1fr
+    "footer" auto
+    / 1fr;
+}
+
+.header {
+  grid-area: header;
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+.main {
+  grid-area: main;
+}
+.footer {
+  grid-area: footer;
+}
+
+/* Selector descendiente */
+nav ul {
+  list-style: none;
+}
+
+/* Selector de tipo para los elementos li dentro del nav ul */
+nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.proyecto-card {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#contenedor-proyectos {
+  display: flex;
+}
+
+#tecnologias {
+  background-color: #ffffff;
+}
+
+#sobre-mi {
+  background-color: #ffffff;
+}
+
+#contactame {
+  background-color: #ffffff;
+}
+
+#sobre-mi-parrafo {
+  padding: 20px;
+  text-align: left;
+}
