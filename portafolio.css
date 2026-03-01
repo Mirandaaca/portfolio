@@ -13,7 +13,6 @@ body {
 
 .layout {
   width: 100%;
-
   display: grid;
   grid:
     "header" auto
@@ -41,10 +40,8 @@ nav ul {
   list-style: none;
 }
 
-/* Selector de tipo para los elementos li dentro del nav ul */
 nav ul li {
-  display: inline-block;
-  margin: 0 20px;
+  margin-left: 30px;
 }
 
 nav ul li a {
