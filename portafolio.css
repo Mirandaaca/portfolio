@@ -11,6 +11,7 @@ body {
   color: #333;
 }
 
+/* ========== LAYOUT GRID ========== */
 .layout {
   width: 100%;
   display: grid;
@@ -25,64 +26,328 @@ body {
   grid-area: header;
   background-color: #333;
   color: white;
-  padding: 20px 0;
-  text-align: center;
+  padding: 15px 40px;
+  align-items: center;
 }
+
 .main {
   grid-area: main;
 }
+
 .footer {
   grid-area: footer;
 }
 
-/* Selector descendiente */
-nav ul {
-  list-style: none;
+/* ========== NAVEGACIÓN ========== */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-nav ul li {
-  margin-left: 30px;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 0.9rem;
 }
 
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ========== SOBRE MÍ ========== */
+#sobre-mi {
+  background-color: #ffffff;
+  padding: 60px 40px;
+}
+
+.sobre-mi-contenido {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sobre-mi-texto {
+  flex: 1;
+}
+
+.sobre-mi-texto h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.sobre-mi-texto p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.sobre-mi-foto {
+  flex-shrink: 0;
+}
+
+.foto-placeholder {
+  width: 200px;
+  height: 200px;
+  background-color: #bbb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.foto-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========== PROYECTOS ========== */
+#proyectos {
+  padding: 60px 40px;
+}
+
+#proyectos h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+}
+
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.proyecto-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.proyecto-imagen {
+  width: 100%;
+  height: 120px;
+  background-color: #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.proyecto-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.proyecto-card h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.proyecto-card p {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.proyectos-enlace {
+  text-align: right;
+  margin-top: 15px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.proyectos-enlace a {
+  color: #555;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+/* ========== TECNOLOGÍAS ========== */
+#tecnologias {
+  background-color: #ffffff;
+  padding: 60px 40px;
+}
+
+#tecnologias h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+}
+
+.tecnologias-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tecnologia-card {
+  background-color: #e8e8e8;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #444;
+}
+
+/* ========== EXPERIENCIA ========== */
+#experiencia {
+  padding: 60px 40px;
+}
+
+#experiencia h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+}
+
+.experiencia-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.experiencia-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.experiencia-card p {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.experiencia-empresa {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+}
+
+.empresa-icono {
+  width: 35px;
+  height: 35px;
+  background-color: #999;
+  border-radius: 4px;
+}
+
+.experiencia-empresa span {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #444;
+}
+
+/* ========== CONTACTO ========== */
+#contactame {
+  background-color: #2a2a2a;
+  color: white;
+  padding: 60px 40px;
+}
+
+#contactame h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+}
+
+.contacto-contenido {
+  display: flex;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.contacto-texto {
+  flex: 1;
+}
+
+.contacto-texto h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.contacto-texto p {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.contacto-formulario {
+  flex: 1;
+}
+
+.contacto-formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contacto-formulario label {
+  font-size: 0.85rem;
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.contacto-formulario input,
+.contacto-formulario textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background-color: #444;
+  color: white;
+}
+
+.contacto-formulario button {
+  padding: 12px;
+  background-color: #3b5998;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.contacto-formulario button:hover {
+  background-color: #2d4a86;
+}
+
+/* ========== FOOTER ========== */
 footer {
   background-color: #333;
   color: white;
   padding: 20px 0;
   text-align: center;
-}
-
-.proyecto-card {
-  border: 1px solid #ddd;
-  background: #fff;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#contenedor-proyectos {
-  display: flex;
-}
-
-#tecnologias {
-  background-color: #ffffff;
-}
-
-#sobre-mi {
-  background-color: #ffffff;
-}
-
-#contactame {
-  background-color: #ffffff;
-}
-
-#sobre-mi-parrafo {
-  padding: 20px;
-  text-align: left;
+  font-size: 0.85rem;
 }

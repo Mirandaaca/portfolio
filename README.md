@@ -1,1 +1,1 @@
-This is basic portfolio developed with basic HTML, CSS and JavaScript
+This is a basic portfolio developed with basic HTML, CSS and JavaScript
