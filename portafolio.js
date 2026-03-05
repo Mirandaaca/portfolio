@@ -3,14 +3,24 @@
 const botonTema = document.getElementById("btn-tema");
 botonTema.addEventListener("click", () => UI.alternarColor());
 
-// Alerta al hacer clic en una tarjeta de proyecto
-const tarjetasProyectos = document.querySelectorAll(".proyecto-card");
+// Alerta al hacer clic en una tarjeta de proyecto (forma anterior: un listener por cada tarjeta)
+// const tarjetasProyectos = document.querySelectorAll(".proyecto-card");
+//
+// tarjetasProyectos.forEach((tarjeta) => {
+//   tarjeta.addEventListener("click", () => {
+//     const nombreProyecto = tarjeta.querySelector("h3").innerText;
+//     alert(`¡Has hecho clic en el proyecto: ${nombreProyecto}!`);
+//   });
+// });
 
-tarjetasProyectos.forEach((tarjeta) => {
-  tarjeta.addEventListener("click", () => {
-    const nombreProyecto = tarjeta.querySelector("h3").innerText;
-    alert(`¡Has hecho clic en el proyecto: ${nombreProyecto}!`);
-  });
+// delegacion de eventos
+const contenedorProyectos = document.querySelector(".proyectos-grid");
+
+contenedorProyectos.addEventListener("click", function (evento) {
+  const tarjeta = evento.target.closest(".proyecto-card");
+  if (tarjeta) {
+    alert("Has hecho clic en el proyecto: " + tarjeta.querySelector("h3").innerText);
+  }
 });
 
 // Efecto hover en las tarjetas de proyecto

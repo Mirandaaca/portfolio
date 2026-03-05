@@ -179,3 +179,17 @@ const UI = {
  
 };
 botonTema.addEventListener("click", () => UI.alternarColor());
+
+
+
+// delegacion  de  eventos: un solo listener para todo el contenedor de proyectos
+const contenedor = document.getElementById("contenedor-proyectos");
+ 
+contenedor.addEventListener("click", function(evento){
+ // .target el elemento que fue clikeado .closest busca el padre mas cercano que coincida con el selector dado
+    const tarjeta = evento.target.closest(".proyecto-card");
+    if(tarjeta){
+        alert ("Haz hecho clic en un proyecto: " + tarjeta.querySelector("h3").innerText);
+    }
+ 
+});
