@@ -1,13 +1,4 @@
-// Modularidad: controlador de interfaz
-const UI = {
-  cuerpo: document.body,
 
-  alternarColor: function () {
-    const esOscuro = this.cuerpo.style.backgroundColor === "black";
-    this.cuerpo.style.backgroundColor = esOscuro ? "white" : "black";
-    this.cuerpo.style.color = esOscuro ? "black" : "white";
-  },
-};
 
 const botonTema = document.getElementById("btn-tema");
 botonTema.addEventListener("click", () => UI.alternarColor());
@@ -38,3 +29,13 @@ tarjetasProyectos.forEach((tarjeta) => {
   });
 });
 
+// Cambiar color de fondo
+const UI = {
+  cuerpo: document.body,
+
+  alternarColor: function () {
+    const esOscuro = this.cuerpo.style.backgroundColor === "black";
+    this.cuerpo.style.backgroundColor = esOscuro ? "white" : "black";
+    this.cuerpo.style.color = esOscuro ? "black" : "white";
+  },
+};
