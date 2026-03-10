@@ -3,7 +3,7 @@
 const botonTema = document.getElementById("btn-tema");
 botonTema.addEventListener("click", () => UI.alternarColor());
 
-// Alerta al hacer clic en una tarjeta de proyecto (forma anterior: un listener por cada tarjeta)
+
 // const tarjetasProyectos = document.querySelectorAll(".proyecto-card");
 //
 // tarjetasProyectos.forEach((tarjeta) => {
