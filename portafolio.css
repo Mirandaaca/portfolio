@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
   line-height: 1.6;
   background-color: #d3d3d3;
   color: #333;
@@ -144,6 +144,13 @@ nav ul li a:hover {
   border-radius: 5px;
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.proyecto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .proyecto-imagen {
@@ -215,6 +222,12 @@ nav ul li a:hover {
   font-size: 0.85rem;
   font-weight: bold;
   color: #444;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tecnologia-card:hover {
+  background-color: #333;
+  color: white;
 }
 
 /* EXPERIENCIA */
@@ -245,6 +258,12 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.experiencia-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .experiencia-card p {
@@ -357,6 +376,18 @@ nav ul li a:hover {
 
 .contacto-formulario button:hover {
   background-color: #2d4a86;
+}
+
+/* ANIMACIONES SCROLL */
+.seccion-oculta {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.seccion-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* FOOTER */
